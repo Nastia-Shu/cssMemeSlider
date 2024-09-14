@@ -65,30 +65,30 @@ body {
    height: 100%;
    margin: 0 auto;
    padding: 0 30px;
+   overflow: hidden;
 }
 
 /*-------обнуление-end-------*/
 
-.slider__block {
+.slider__line {
     margin-top: 2vw;
     width: 100%;
     height: 50vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    transition: all 1s;
     
 }
 
 .slider__picture {
-    position: relative;
     width: 100%;
     height: 100%;
     border-radius: 20px;
     /* object-fit: contain; */
 }
 
-.contante {
-    margin-top: 2vw;
+.slider__contante {
+    margin-top: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -96,9 +96,36 @@ body {
     border-radius: 10%;
 }
 
-.text {
+.slider__text {
     color: white;
     font-size: 2vw;
 }
 
+.slider__wrapper {
+   display: flex;
+   column-gap: 20px;
+}
 
+.slider__dot {
+   width: 16px;
+   height: 16px;
+   border-radius: 20px;
+   border: 1px solid rgb(155, 179, 255);
+   background-color: rgb(155, 179, 255);
+}
+
+.slider__dot:hover {
+   border: 1px solid white;
+   background-color: white;
+   cursor: pointer;
+   transition: all 0.3s ease-out;
+}
+
+.active-dot {
+   background-color: black;
+}
+
+.active-dot:hover {
+   background-color: black;
+   border: 1px solid white;
+}
